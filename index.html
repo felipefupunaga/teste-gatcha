@@ -5,23 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gatcha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Gatcha Simulator</h1>
     </header>
     <main>
-        <input type="text" name="char" id="char" placeholder="Informe o personagem...">
-        <input type="checkbox" name="multiplicar10" id="multiplicar10">
-        <label for="multiplicar10">Roletar 10x</label>
+        <div>
+            <span>Banner: </span>
+            <input type="text" name="char" id="char" placeholder="Informe o personagem...">
+            <input type="checkbox" name="multiplicar10" id="multiplicar10">
+            <label for="multiplicar10">Roletar 10x</label>
+        </div>
         <button id="roletar">Roletar!</button>
-        <div id="resultado"></div>
+        <div id="resultado" class="resultado"></div>
     </main>
-    
+
     <script src="./funcoes.js"></script>
     <script>
         
         let total_roll = 90
+        let total_roll_4 = 10
         let garantido = false
 
         const roletar = document.querySelector("#roletar")

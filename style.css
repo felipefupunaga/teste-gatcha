@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+}
+
+div.resultado {
+    margin: auto;
+    width: 77%;
+}
+
+.roll_4 {
+    color: purple;
+}
+
+.roll_5 {
+    color: orange;
+}

@@ -5,18 +5,26 @@ function roll (char) {
     if (rand == 1) {
         const randLendarios = Math.ceil(Math.random() * 2)
         if (randLendarios == 1 || garantido == true) {
-            resultado.innerHTML += `<strong>${n_roll} - ${char.value}</strong><br />`
+            resultado.innerHTML += `<strong class="roll_5">${n_roll} - ${char.value}</strong><br />`
             garantido == false
         } else {
-            resultado.innerHTML += `<strong>${n_roll} - ${lendariosGenericos()}<br />`
+            resultado.innerHTML += `<strong class="roll_5">${n_roll} - ${lendariosGenericos()}<br />`
             garantido == true
         }
+
         total_roll = 90
-        // console.log(char.value)
+
     } else {
-        resultado.innerHTML += `${n_roll} - Errou... 3* || `
+        const rand4Estrelas = Math.ceil(Math.random() * total_roll_4)
+        if (rand4Estrelas == 1) {
+            resultado.innerHTML += `<strong class="roll_4">${n_roll} - Epico 4*</strong> || `
+            total_roll_4 = 10
+        } else {
+            resultado.innerHTML += `${n_roll} - Errou... 3* || `
+            total_roll_4--
+        }
+
         total_roll--
-        // console.log("Errou... 3*")
     }
 }
 
