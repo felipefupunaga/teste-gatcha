@@ -4,12 +4,12 @@ function roll (char) {
     const n_roll = 91 - total_roll
     if (rand == 1) {
         const randLendarios = Math.ceil(Math.random() * 2)
-        if (randLendarios == 1 || garantido == true) {
+        if (randLendarios == 1 || garantido_5 == true) {
             resultado.innerHTML += `<strong class="roll_5">${n_roll} - ${char.value}</strong><br />`
-            garantido == false
+            garantido_5 == false
         } else {
             resultado.innerHTML += `<strong class="roll_5">${n_roll} - ${lendariosGenericos()}<br />`
-            garantido == true
+            garantido_5 == true
         }
 
         total_roll = 90
